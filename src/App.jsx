@@ -1,13 +1,17 @@
 import "./styles/app.css"
 import { NavBar } from "./components/navBar"
 import { ItemListContainer } from "./components/itemListContainer";
+import { NewArrives } from "./components/newArrives";
 
 export const App = () => {
   return (
-    <div>
-      <NavBar></NavBar>
-      <ItemListContainer greeting={"Buenass"}></ItemListContainer>
-    </div>
+    <>
+        <NavBar></NavBar>
+      <div className="pt-24">
+        <NewArrives></NewArrives>
+        <ItemListContainer greeting={"Buenass"}></ItemListContainer>
+      </div>
+    </>
   );
 }
 

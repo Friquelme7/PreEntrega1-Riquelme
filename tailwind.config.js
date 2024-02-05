@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,jsx}"
   ],
   theme: {
+    fontFamily: {
+      'Montserrat': ['Montserrat'],
+    },
     extend: {},
   },
   plugins: [],

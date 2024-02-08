@@ -6,7 +6,7 @@ import { NewArrives } from "./components/newArrives";
 export const App = () => {
   return (
     <>
-        <NavBar></NavBar>
+      <NavBar></NavBar>
       <div className="pt-24">
         <NewArrives></NewArrives>
         <ItemListContainer greeting={"Buenass"}></ItemListContainer>

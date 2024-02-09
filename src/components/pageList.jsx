@@ -1,6 +1,6 @@
 export const PageList = () => {
     return (
-        <div className="font-Montserrat font-semibold text-sm">
+        <div className="font-Montserrat font-semibold text-sm mr-10">
             <a href="">
                 <ul className="flex">
                     <div className="relative">

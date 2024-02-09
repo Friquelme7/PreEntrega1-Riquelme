@@ -3,6 +3,7 @@ import { NavBar } from "./components/navBar"
 import { ItemListContainer } from "./components/itemListContainer";
 import { NewArrives } from "./components/newArrives";
 
+
 export const App = () => {
   return (
     <>

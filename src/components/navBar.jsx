@@ -1,13 +1,17 @@
 import { CartWidget } from "./cartWidget"
 import { Logo } from "./logo"
 import { PageList } from "./pageList"
+import { SearchBar } from "./searchBar";
 
 export const NavBar = () => {
     return (
-        <div className="fixed w-screen transition duration-500 opacity-95 hover:opacity-100 flex flex-row justify-between items-center px-4 bg-amber-50 text-black font-mono shadow-xl">
+        <div className="px-2 fixed w-screen transition duration-500 opacity-95 hover:opacity-100 flex items-center justify-between bg-[#fffefc] text-black font-mono shadow-xl">
             <PageList></PageList>
             <Logo></Logo>
+            <div className="flex items-center">
+            <SearchBar></SearchBar>
             <CartWidget ></CartWidget>
+            </div>
         </div>
     );
 }

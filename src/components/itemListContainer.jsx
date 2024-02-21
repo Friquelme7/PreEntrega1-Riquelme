@@ -1,8 +1,22 @@
-export const ItemListContainer = ({ greeting }) => {
+import { useEffect, useState } from "react";
+import { ItemList } from "./ItemList";
+export const ItemListContainer = () => {
+    const [product, setProduct] = useState([])
+
+    useEffect(() => {
+        fetch("./data/productos.json")
+            .then(response => response.json())
+            .then(prods => setProduct(prods))
+            .catch((error) => console.log(error))
+        
+
+    }, [])
+
+
     return (
-        <div className="flex justify-center">
-            <p>{greeting}</p>
-        </div>
+        <>
+            <ItemList products={product}/>
+        </>
     );
 }
 

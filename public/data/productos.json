@@ -1,0 +1,30 @@
+[
+    {
+        "id" : 1,
+        "productName" : "Post Mortem",
+        "type" : "vinilo",
+        "author" : "Dillom",
+        "precio" : 15000,
+        "stock" : 12,
+        "img" : "./img/pm.png"
+    }, 
+    {
+        "id" : 2,
+        "productName" : "Nada Personal",
+        "type" : "vinilo",
+        "author" : "Soda Stereo",
+        "precio" : 25000,
+        "stock" : 2,
+        "img" : "./img/soda.webp"
+    }, 
+    {
+        "id" : 3,
+        "productName" : "Almendra",
+        "type" : "vinilo",
+        "author" : "Spinetta",
+        "precio" : 22000,
+        "stock" : 7,
+        "img" : "./img/lel.webp"
+    } 
+    
+]

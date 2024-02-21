@@ -2,7 +2,7 @@
 
 export const NewArrives = () => {
     return (
-        <img src="./Dillom.jpg_large" alt="" />
+        <img src="./img/Dillom.jpg_large" alt="" />
     );
 }
 

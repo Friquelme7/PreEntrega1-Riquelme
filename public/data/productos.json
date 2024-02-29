@@ -1,30 +1,102 @@
 [
     {
         "id" : 1,
-        "productName" : "Post Mortem",
+        "productName" : "Bipolar",
         "type" : "vinilo",
-        "author" : "Dillom",
+        "author" : "El Cuarteto de Nos",
         "precio" : 15000,
         "stock" : 12,
-        "img" : "./img/pm.png"
+        "img" : "../img/1.png"
     }, 
     {
         "id" : 2,
-        "productName" : "Nada Personal",
+        "productName" : "Mucho",
         "type" : "vinilo",
-        "author" : "Soda Stereo",
+        "author" : "Babasónicos",
         "precio" : 25000,
         "stock" : 2,
-        "img" : "./img/soda.webp"
+        "img" : "../img/2.png"
     }, 
     {
         "id" : 3,
-        "productName" : "Almendra",
+        "productName" : "1989 Taylor's Version",
         "type" : "vinilo",
-        "author" : "Spinetta",
+        "author" : "Taylor Swift",
         "precio" : 22000,
         "stock" : 7,
-        "img" : "./img/lel.webp"
-    } 
-    
+        "img" : "../img/3.png"
+    },
+    {
+        "id" : 4,
+        "productName" : "Evolve",
+        "type" : "vinilo",
+        "author" : "Imagine Dragons",
+        "precio" : 30000,
+        "stock" : 4,
+        "img" : "../img/4.png"
+    }, 
+    {
+        "id" : 5,
+        "productName" : "Alta Suciedad",
+        "type" : "vinilo",
+        "author" : "Andrés Calamaro",
+        "precio" : 35000,
+        "stock" : 1,
+        "img" : "../img/5.png"
+    },
+    {
+        "id" : 6,
+        "productName" : "Ultraviolence",
+        "type" : "vinilo",
+        "author" : "Lana Del Rey",
+        "precio" : 32000,
+        "stock" : 3,
+        "img" : "../img/6.png"
+    },
+    {
+        "id" : 7,
+        "productName" : "Random Access Memories",
+        "type" : "vinilo",
+        "author" : "Daft Punk",
+        "precio" : 31000,
+        "stock" : 3,
+        "img" : "../img/7.png"
+    },
+    {
+        "id" : 8,
+        "productName" : "Chac Tu Chac",
+        "type" : "vinilo",
+        "author" : "Los Piojos",
+        "precio" : 22000,
+        "stock" : 3,
+        "img" : "../img/8.png"
+    },
+    {
+        "id" : 9,
+        "productName" : "Cabildo y Juramento",
+        "type" : "vinilo",
+        "author" : "Conociendo Rusia",
+        "precio" : 24000,
+        "stock" : 3,
+        "img" : "../img/10.png"
+    },
+    {
+        "id" : 10,
+        "productName" : "Cabildo y Juramento",
+        "type" : "board",
+        "author" : "Conociendo Rusia",
+        "precio" : 24000,
+        "stock" : 3,
+        "img" : "../img/10.png"
+    },
+    {
+        "id" : 11,
+        "productName" : "Ultraviolence",
+        "type" : "cards",
+        "author" : "Lana Del Rey",
+        "precio" : 32000,
+        "stock" : 3,
+        "img" : "../img/6.png"
+    }
+
 ]

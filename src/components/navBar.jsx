@@ -1,16 +1,20 @@
-import { CartWidget } from "./cartWidget"
-import { Logo } from "./logo"
-import { PageList } from "./pageList"
-import { SearchBar } from "./searchBar";
+import { CartWidget } from "./CartWidget"
+import { PageList } from "./PageList"
+import { SearchBar } from "./SearchBar";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
     return (
-        <div className="px-2 fixed w-screen transition duration-500 opacity-95 hover:opacity-100 flex items-center justify-between bg-[#fffefc] text-black font-mono shadow-xl">
+        <div className="px-2 fixed w-screen transition duration-500 opacity-100 hover:opacity-100 flex items-center justify-between bg-[#FFFCF2] text-black font-mono shadow-xl">
             <PageList></PageList>
-            <Logo></Logo>
-            <div className="flex items-center">
-            <SearchBar></SearchBar>
-            <CartWidget ></CartWidget>
+            <Link to={"/"}>            
+            <div className="flex items-center cursor-pointer">
+                <img className="w-52 h-14 my-3" src="../img/proyecto.png" alt="" />
+            </div>
+            </Link>
+            <div className="flex items-center justify-evenly">
+                <SearchBar />
+                <CartWidget />
             </div>
         </div>
     );

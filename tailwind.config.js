@@ -7,6 +7,7 @@ export default {
   theme: {
     fontFamily: {
       'Montserrat': ['Montserrat'],
+      'alata': ['Alata'],
     },
     extend: {},
   },

@@ -9,7 +9,6 @@ export const ItemDetailsContainer = () => {
         fetch("../data/productos.json")
             .then(response => response.json())
             .then(prods => {
-                console.log(prods)
                 const productFinded = prods.find(prod => prod.id == idp)
                 if (productFinded)
                     setProduct(productFinded)

@@ -8,14 +8,14 @@ export const PageList = () => {
                         <li className="p-4 after:absolute after:content-[''] after:bg-black after:w-[100%] after:h-[2px] after:left-0 after:rounded-xl after:duration-300 after:-bottom-[2px] after:scale-x-0 after:origin-center after:hover:scale-x-90">Vinilos</li>
                     </div>
                 </Link>
-                <Link to={"/category/cards"}>
+                <Link to={"/category/cd"}>
                     <div className="relative">
-                        <li className="p-4 after:absolute after:content-[''] after:bg-black after:w-[100%] after:h-[2px] after:left-0 after:rounded-xl after:duration-300 after:-bottom-[2px] after:scale-x-0 after:origin-center after:hover:scale-x-90">Cards</li>
+                        <li className="p-4 after:absolute after:content-[''] after:bg-black after:w-[100%] after:h-[2px] after:left-0 after:rounded-xl after:duration-300 after:-bottom-[2px] after:scale-x-0 after:origin-center after:hover:scale-x-90">Cds</li>
                     </div>
                 </Link>
-                <Link to={"/category/board"}>
+                <Link to={"/category/bandejas"}>
                     <div className="relative">
-                        <li className="p-4 after:absolute after:content-[''] after:bg-black after:w-[100%] after:h-[2px] after:left-0 after:rounded-xl after:duration-300 after:-bottom-[2px] after:scale-x-0 after:origin-center after:hover:scale-x-90">Boards</li>
+                        <li className="p-4 after:absolute after:content-[''] after:bg-black after:w-[100%] after:h-[2px] after:left-0 after:rounded-xl after:duration-300 after:-bottom-[2px] after:scale-x-0 after:origin-center after:hover:scale-x-90">Bandejas</li>
                     </div>
                 </Link>
             </ul>

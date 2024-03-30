@@ -9,7 +9,7 @@ export const NavBar = () => {
             <PageList></PageList>
             <Link to={"/"}>            
             <div className="flex items-center cursor-pointer">
-                <img className="w-52 h-14 my-3" src="../img/proyecto.png" alt="" />
+                <img className="w-52 h-14 my-3" src="https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/proyecto.png?alt=media&token=27cb923d-21c3-485b-aa6f-b9329b62e83c" alt="" />
             </div>
             </Link>
             <div className="flex items-center justify-evenly">

@@ -1,0 +1,192 @@
+[
+    {
+        "productName" : "Bipolar",
+        "type" : "vinilo",
+        "author" : "El Cuarteto de Nos",
+        "precio" : 15000,
+        "stock" : 12,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/1.png?alt=media&token=b4a1af67-764b-48cb-8d81-4a49dd418c0e",
+        "genre" : "rock"
+        
+    }, 
+    {
+        "productName" : "Mucho",
+        "type" : "vinilo",
+        "author" : "Babasónicos",
+        "precio" : 25000,
+        "stock" : 2,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/2.png?alt=media&token=b5eaf531-3d5b-4a14-aa1f-4a62ca4e7fb4",
+        "genre" : "rock"
+    }, 
+    {
+        "productName" : "1989 Taylor's Version",
+        "type" : "vinilo",
+        "author" : "Taylor Swift",
+        "precio" : 22000,
+        "stock" : 7,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/3.png?alt=media&token=d42e25f3-9892-4348-9f95-4c644354e8e0",
+        "genre" : "pop"
+    },
+    {
+        "productName" : "Evolve",
+        "type" : "vinilo",
+        "author" : "Imagine Dragons",
+        "precio" : 30000,
+        "stock" : 4,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/4.png?alt=media&token=abf7b768-86e4-48a3-97a8-08d629edbb57",
+        "genre" : "rock"
+    }, 
+    {
+        "productName" : "Alta Suciedad",
+        "type" : "vinilo",
+        "author" : "Andrés Calamaro",
+        "precio" : 35000,
+        "stock" : 7,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/5.png?alt=media&token=9dacf03f-50d7-4b26-98d2-0b43119b65b9",
+        "genre" : "rock"
+    },
+    {
+        "productName" : "Ultraviolence",
+        "type" : "vinilo",
+        "author" : "Lana Del Rey",
+        "precio" : 32000,
+        "stock" : 3,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/6.png?alt=media&token=3540c4f0-8b87-4442-b155-9d0936789241",
+        "genre" : "pop"
+    },
+    {
+        "productName" : "Random Access Memories",
+        "type" : "vinilo",
+        "author" : "Daft Punk",
+        "precio" : 31000,
+        "stock" : 1,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/7.png?alt=media&token=4788f5d4-e112-4d1a-8805-0e6bdcb41367",
+        "genre" : "funk"
+    },
+    {
+        "productName" : "Chac Tu Chac",
+        "type" : "vinilo",
+        "author" : "Los Piojos",
+        "precio" : 22000,
+        "stock" : 5,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/8.png?alt=media&token=6370e5c1-309d-433e-804e-5b676ceb8b7a",
+        "genre" : "rock"
+    },
+    {
+        "productName" : "Cabildo y Juramento",
+        "type" : "vinilo",
+        "author" : "Conociendo Rusia",
+        "precio" : 24000,
+        "stock" : 10,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/9.png?alt=media&token=6f49808b-0f4d-4001-8f1e-5f95063eab43",
+        "genre" : "rock"
+    },
+    {
+        "productName" : "Mr. Morale And The Big Steppers",
+        "type" : "cd",
+        "author" : "Kendrick Lamar",
+        "precio" : 2400,
+        "stock" : 5,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/10.png?alt=media&token=b30ad2c9-1aa8-4902-989f-4a23cda8e351",
+        "genre" : "rap"
+    },
+    {
+        "productName" : "By The Way",
+        "type" : "cd",
+        "author" : "Red Hot Chili Peppers",
+        "precio" : 2800,
+        "stock" : 1,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/11.png?alt=media&token=2c6edc09-27d8-4870-992a-eb8fe38f94ee",
+        "genre" : "rock"
+    },
+    {
+        "productName" : "Thriller",
+        "type" : "cd",
+        "author" : "Michael Jackson",
+        "precio" : 17000,
+        "stock" : 2,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/12.png?alt=media&token=ab5a7f5c-9bb4-4401-8415-201fe2b53be9",
+        "genre" : "pop"
+    },
+    {
+        "productName" : "Astroworld",
+        "type" : "cd",
+        "author" : "Travis Scott",
+        "precio" : 11000,
+        "stock" : 7,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/13.png?alt=media&token=93116e2b-e144-4da3-b8a4-79526434e93b",
+        "genre" : "rap"
+    },
+    {
+        "productName" : "Infame",
+        "type" : "cd",
+        "author" : "Babasonicos",
+        "precio" : 6900,
+        "stock" : 8,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/14.png?alt=media&token=d5909a3a-40f6-4e3b-bc9c-e73d5522c0b7",
+        "genre" : "rock"
+    },
+    {
+        "productName" : "When We All Fall Asleep, Where Do We Goe",
+        "type" : "cd",
+        "author" : "Billie Eilish",
+        "precio" : 4300,
+        "stock" : 3,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/15.png?alt=media&token=6bdcb204-3b79-4b5c-8c96-bdfbf04180e3",
+        "genre" : "pop"
+    },
+    {
+        "productName" : "Almendra",
+        "type" : "cd",
+        "author" : "Almendra",
+        "precio" : 5500,
+        "stock" : 1,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/16.png?alt=media&token=2913fa60-94cc-4583-baca-2f62f7ff2571",
+        "genre" : "rock"
+    },
+    {
+        "productName" : "Jessico",
+        "type" : "cd",
+        "author" : "Babasonicos",
+        "precio" : 7100,
+        "stock" : 7,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/17.png?alt=media&token=b3d7eb30-a60e-40df-981d-4af0e62413df",
+        "genre" : "rock"
+    },
+    {
+        "productName" : "Hijos Del Culo",
+        "type" : "cd",
+        "author" : "Bersuit Vergarabat",
+        "precio" : 2900,
+        "stock" : 3,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/18.png?alt=media&token=bddaf6ca-5479-4e2d-a5a1-df2d3e1e80b7",
+        "genre" : "rock"
+    },
+    {
+        "productName" : "Tocadiscos Audio Technica",
+        "type" : "bandejas",
+        "author" : "lp120x USB Bk NEGRA",
+        "precio" : 730700,
+        "stock" : 1,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/19.png?alt=media&token=1a33f559-e1d9-401a-8ea9-6ebe17e3f65e",
+        "genre" : "NAs"
+    },
+        {
+        "productName" : "Tocadiscos Audio Technica",
+        "type" : "bandejas",
+        "author" : "lp60x Bluetooth Blanca",
+        "precio" : 390000,
+        "stock" : 1,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/20.png?alt=media&token=cb19cf63-eddd-48f3-b38e-93c34e1f70c1",
+        "genre" : "NAs"
+    },
+        {
+        "productName" : "Tocadiscos Audio Technica",
+        "type" : "bandejas",
+        "author" : "lp120x Direct Drive Plateada",
+        "precio" : 700800,
+        "stock" : 1,
+        "img" : "https://firebasestorage.googleapis.com/v0/b/apolo-store-f312d.appspot.com/o/21.png?alt=media&token=7f1bcb3f-c39c-4bf2-ba7e-0097253337f8",
+        "genre" : "NAs"
+    }
+]

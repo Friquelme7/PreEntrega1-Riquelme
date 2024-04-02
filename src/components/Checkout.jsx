@@ -67,7 +67,6 @@ export const Checkout = () => {
                 emptyCart();
                 e.target.reset();
                 navigate("/")
-
     }
 
     return (
@@ -75,10 +74,12 @@ export const Checkout = () => {
             {
                 carrito.length == 0 ?
                     <>
-                        <h2>para finalizar la compra debe tener productos en el carrito</h2>
+                    <div className="min-h-[95vh] py-28 flex flex-col justify-center items-center">
+                        <h2 className="text-4xl text-gray-600 mb-16">Para finalizar la compra debe tener productos en el carrito!</h2>
                         <Link to={"/"}>
                             <button className="flex justify-center font-Montserrat text-sm bg-[#D90429] hover:bg-[#EF233C] rounded-lg  border-black px-3 py-3 text-white font-medium">Volver al Inicio</button>
                         </Link>
+                    </div>
                     </>
                     :
                     <div className="px-10 py-28 bg-[#e0e2e6]">

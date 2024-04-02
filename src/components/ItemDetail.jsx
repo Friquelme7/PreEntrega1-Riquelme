@@ -2,19 +2,19 @@ import { useCounter } from '../hooks/useCounter.js';
 import { useCarritoContext } from '../context/CartContext.jsx';
 import { toast } from 'react-toastify';
 export const ItemDetail = ({ item }) => {
-    const { addItem } = useCarritoContext ();
+    const { addItem } = useCarritoContext();
     const { count, increment, decrement } = useCounter(1, item.stock, 1);
     const handleToCart = () => {
         addItem(item, count)
         toast.success(`Producto agregado correctamente`, {
-            position : "top-right",
-            autoClose : 5000,
+            position: "top-right",
+            autoClose: 5000,
             hideProgressBar: false,
-            closeOnClick : true,
-            pauseOnHover : false,
-            draggable : true,
-            progress : undefined,
-            theme : "dark"
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "dark"
         })
     }
     return (

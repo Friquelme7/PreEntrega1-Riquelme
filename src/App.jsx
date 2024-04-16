@@ -1,4 +1,4 @@
-import "./styles/app.css"
+import "./styles/App.css"
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/navBar";

@@ -13,15 +13,21 @@ export const Checkout = () => {
         const datForm = new FormData(formRef.current);
         const cliente = Object.fromEntries(datForm);
 
-        const aux = [...carrito]
+        let aux = [...carrito]
         aux.forEach(prodCarrito => {
             getProduct(prodCarrito.id).then(prodBDD => {
+                console.log("hola me estoy ejecutando")
                 if (prodBDD.stock >= prodCarrito.quantity) {
                     prodBDD.stock -= prodCarrito.quantity;
                     updateProduct(prodBDD.id, prodBDD);
                 }
                 else {
-                    toast.info(`El producto con el nombre ${prod.productName} no puede continuar con la compra ya que no posee stock suficiente`, {
+                    const fixeador = () => {
+                        return aux.filter((prod) => prod.id != prodBDD.id)
+                    }
+                    aux = fixeador();
+                    console.log(aux)
+                    toast.info(`El producto con el nombre ${prodBDD.productName} no puede continuar con la compra ya que no posee stock suficiente`, {
                         position: "top-right",
                         autoClose: 5000,
                         hideProgressBar: false,
@@ -31,42 +37,44 @@ export const Checkout = () => {
                         progress: undefined,
                         theme: "dark"
                     })
-                    aux.filter(prod => prod.id != prodBDD.id)
                 }
             })
         })
-
-        const orden = aux.map(prod => ({ id: prod.id, price: prod.price, quantity: prod.quantity }))
-
-        createOrdenCompra(cliente, totalPrice(), orden, new Date().toLocaleDateString("es-AR", { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }))
-            .then(ordenCompra => {
-                toast.success(`✨ Muchas gracias por comprar con nosotros su id de compra es ${ordenCompra.id} por un total de $${totalPrice()}`, {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark"
-                })
-
-                    .catch(e => {
-                        toast.error(`Error al generar orden de compra ${e}`, {
-                            position: "top-right",
-                            autoClose: 5000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "dark"
-                        })
+        let orden;
+        setTimeout(() => {
+            orden = aux.map(prod => ({ id: prod.id, price: prod.price, quantity: prod.quantity }))
+            console.log(aux)
+            createOrdenCompra(cliente, totalPrice(), orden, new Date().toLocaleDateString("es-AR", { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone }))
+                .then(ordenCompra => {
+                    toast.success(`✨ Muchas gracias por comprar con nosotros su id de compra es ${ordenCompra.id} por un total de $${totalPrice()}`, {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark"
                     })
-            })
-        emptyCart();
-        e.target.reset();
-        navigate("/")
+                    emptyCart();
+                    e.target.reset();
+                    navigate("/")
+                })
+                .catch(e => {
+                    console.log(e);
+                    toast.error(`Error al generar orden de compra ${e}`, {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark"
+                    })
+                })
+        },6000)
+        
     }
 
     return (
@@ -86,16 +94,16 @@ export const Checkout = () => {
                         <div className="p-4 py-0 col-span-3">
                             <form id="checkout" className="flex place-items-start w-full px-10 py-4 " ref={formRef} onSubmit={handleSubmit}>
                                 <div className="w-2/3 p-5 bg-[#e0e2e6] rounded-xl">
-                                    <h2 className="font-semibold text-xl py-2">Checkout</h2>
+                                    <h2 className="font-semibold text-2xl py-2">Checkout</h2>
                                     <div className="mb-10">
                                         <h3 className="font-semibold text-lg pt-2 pb-5" >Info de Pago</h3>
                                         <div className="grid grid-cols-4 gap-x-2 gap-y-8 px-4">
-                                            <input placeholder="Nombre" title="Ingrese un Nombre valido" pattern="^[A-Za-z]+(?:\s+[A-Za-z]+)?$" required className="border-2 border-gray-300 rounded-lg p-2" type="text" name="nombre" />
-                                            <input placeholder="Apellido" pattern="[A-Za-z]{2,}" required className="border-2 border-gray-300 rounded-lg p-2" type="text" name="apellido" />
-                                            <input placeholder="Ciudad" pattern="[A-Za-z\s?]{2,}" required className="border-2 border-gray-300 rounded-lg col-start-3 col-span-2 p-2" type="text" name="ciudad" />
-                                            <input placeholder="Direccion de Facturacion" pattern="^[A-Za-z]+\s+(?:[A-Za-z]+\s+)*\d+$" required className="border-2 border-gray-300 rounded-lg  col-span-2 p-2" type="text" name="direccionFacturacion" />
-                                            <input placeholder="Codigo Postal" pattern="^[0-9]{4}$" required className="border-2 border-gray-300 rounded-lg p-2 "maxLength="4" type="text" name="cp" />
-                                            <input placeholder="Numero de Telefono" pattern="^[0-9]{10}$" required className="border-2 border-gray-300 rounded-lg p-2 col-start-1 col-span-2" maxLength="10" type="tel" name="tel" />
+                                            <input placeholder="Nombre" title="Ingrese un Nombre valido" pattern="^[A-Za-z]+(?:\s+[A-Za-z]+)?$" required className="focus:outline-none focus:invalid:ring-red-500 focus:invalid:border-red-500 border-2 border-gray-300 rounded-lg p-2" type="text" name="nombre" />
+                                            <input placeholder="Apellido" title="Ingrese un Apellido valido" pattern="[A-Za-z]{2,}" required className="focus:outline-none focus:invalid:ring-red-500 focus:invalid:border-red-500 border-2 border-gray-300 rounded-lg p-2" type="text" name="apellido" />
+                                            <input placeholder="Ciudad" title="Ingrese una ciudad valida" pattern="[A-Za-z\s?]{2,}" required className="focus:outline-none focus:invalid:ring-red-500 focus:invalid:border-red-500 border-2 border-gray-300 rounded-lg col-start-3 col-span-2 p-2" type="text" name="ciudad" />
+                                            <input placeholder="Direccion de Facturacion" title="Direccion mas numero de calle" pattern="^[A-Za-z]+\s+(?:[A-Za-z]+\s+)*\d+$" required className="focus:outline-none focus:invalid:ring-red-500 focus:invalid:border-red-500 border-2 border-gray-300 rounded-lg  col-span-2 p-2" type="text" name="direccionFacturacion" />
+                                            <input placeholder="Codigo Postal" title="Ingrese un codigo postal valido" pattern="^[0-9]{4}$" required className="focus:outline-none focus:invalid:ring-red-500 focus:invalid:border-red-500 border-2 border-gray-300 rounded-lg p-2 " maxLength="4" type="text" name="cp" />
+                                            <input placeholder="Numero de Telefono" title="Ingrese un numero de telefono valido" pattern="^[0-9]{10}$" required className="focus:outline-none focus:invalid:ring-red-500 focus:invalid:border-red-500 border-2 border-gray-300 rounded-lg p-2 col-start-1 col-span-2" maxLength="10" type="tel" name="tel" />
                                         </div>
                                     </div>
                                     <div className="mb-10">
@@ -105,10 +113,10 @@ export const Checkout = () => {
                                                 <option value="visa">Visa</option>
                                                 <option value="master-card">Master Card</option>
                                             </select>
-                                            <input type="text" pattern="[0-9]{16}" autoComplete="cc-number" maxLength="16" placeholder="xxxx xxxx xxxx xxxx" required className=" border-2 border-gray-300 rounded-lg p-2 col-start-1 col-span-2" name="tarjetaNumero" />
-                                            <input placeholder="Codigo Seguridad" pattern="[0-9]{3}" required className="border-2 border-gray-300 rounded-lg p-2" type="text" maxLength="3" name="tarjetaCodigo" />
-                                            <input placeholder="Mes vencimiento" pattern="[0-9]{2}" required className="border-2 border-gray-300 rounded-lg p-2 col-start-1 " maxLength="2" type="text" name="mesExp" />
-                                            <input placeholder="Año vencimiento" pattern="[0-9]{2}" required className="border-2 border-gray-300 rounded-lg p-2 "  inputMode="text" type="text" maxLength="2" name="yearExp" />
+                                            <input type="text" pattern="[0-9]{16}" autoComplete="cc-number" maxLength="16" placeholder="xxxx xxxx xxxx xxxx" required className="focus:outline-none focus:invalid:ring-red-500 focus:invalid:border-red-500 border-2 border-gray-300 rounded-lg p-2 col-start-1 col-span-2" name="tarjetaNumero" />
+                                            <input title="Ingrese un codigo de seguridad de tres digitos" placeholder="Codigo Seguridad" pattern="[0-9]{3}" required className="focus:outline-none focus:invalid:ring-red-500 focus:invalid:border-red-500 border-2 border-gray-300 rounded-lg p-2" type="text" maxLength="3" name="tarjetaCodigo" />
+                                            <input title="Ingrese un mes valido" placeholder="Mes vencimiento" pattern="^0?[1-9]|1[0-2]$" required className="focus:outline-none focus:invalid:ring-red-500 focus:invalid:border-red-500 border-2 border-gray-300 rounded-lg p-2 col-start-1 " maxLength="2" type="text" name="mesExp" />
+                                            <input title="Ingrese un año valido" placeholder="Año vencimiento" pattern="[0-9]{2}" required className="focus:outline-none focus:invalid:ring-red-500 focus:invalid:border-red-500 border-2 border-gray-300 rounded-lg p-2 " inputMode="text" type="text" maxLength="2" name="yearExp" />
                                         </div>
                                     </div>
                                 </div>
@@ -140,46 +148,3 @@ export const Checkout = () => {
             }
         </>)
 }
-/*
-                    <div className="px-10 py-28 bg-[#e0e2e6]">
-                        <form className="flex place-items-start w-full px-10 py-4 " ref={formRef} onSubmit={handleSubmit}>
-                            <div className="w-2/3 p-5 bg-white">
-                                <h2 className="font-semibold text-xl py-2">Checkout</h2>
-                                <div className="mb-10">
-                                    <h3 className="font-semibold text-lg pt-2 pb-5" >Info de Pago</h3>
-                                    <div className="grid grid-cols-4 gap-x-2 gap-y-8 px-4">
-                                        <input placeholder="Nombre" className="border-2 border-gray-300 rounded-lg p-2" type="text" name="nombre" />
-                                        <input placeholder="Apellido" className="border-2 border-gray-300 rounded-lg p-2" type="text" name="apellido" />
-                                        <input placeholder="Ciudad" className="border-2 border-gray-300 rounded-lg col-start-3 col-span-2 p-2" type="text" name="ciudad" />
-                                        <input placeholder="Direccion de Facturacion" className="border-2 border-gray-300 rounded-lg  col-span-2 p-2" type="text" name="direccionFacturacion" />
-                                        <input placeholder="Codigo Postal" className="border-2 border-gray-300 rounded-lg p-2" type="text" name="cp" />
-                                        <input placeholder="Numero de Telefono" className="border-2 border-gray-300 rounded-lg p-2 col-start-1 col-span-2 " type="text" name="tel" />
-                                    </div>
-                                </div>
-                                <div className="mb-10">
-                                    <h3 className="font-semibold text-lg pt-2 pb-5" >Metodo de Pago</h3>
-                                    <div className="grid grid-cols-4 gap-x-2 gap-y-8 px-4">
-                                        <select className="border-2 col-span-2 border-gray-300 rounded-lg p-2" name="tarteja" id="">
-                                            <option value="visa">Visa</option>
-                                            <option value="master-card">Master Card</option>
-                                        </select>
-                                        <input id="ccn" type="tel" inputMode="numeric" pattern="[0-9\s]{13,19}" autoComplete="cc-number" maxLength="19"
-                                            placeholder="xxxx xxxx xxxx xxxx" className="border-2 border-gray-300 rounded-lg p-2 col-start-1 col-span-2" name="tarjetaNumero" />
-                                        <input placeholder="Codigo Seguridad" className="border-2 border-gray-300 rounded-lg p-2" type="text" name="tarjetaCodigo" />
-                                        <input placeholder="Dia vencimiento" className="border-2 border-gray-300 rounded-lg p-2 col-start-1" type="text" name="mesExp" />
-                                        <input placeholder="Mes vencimiento" className="border-2 border-gray-300 rounded-lg p-2" type="text" name="yearExp" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="px-10 py-1 w-1/3 ">
-                                <h2 className="font-semibold text-xl py-2">Resumen</h2>
-                                <p className="pb-1">Precio : $5.000</p>
-                                <p className="pb-1">Impuestos : $10.000</p>
-                                <div className="my-2 w-full h-[1px] bg-gray-400"></div>
-                                <h3 className="py-1 font-medium text-base">Total : $15.000</h3>
-                                <input className="w-full h-10 my-3 text-white bg-[#D90429] hover:bg-[#EF233C] rounded-xl" type="submit" />
-                            </div>
-                        </form>
-                    </div>
-*/
-

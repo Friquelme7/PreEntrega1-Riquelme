@@ -7,8 +7,6 @@ export const useCounter = (startValue = 1, maxValue = 1, step = 1) => {
     const increment = () => {
         if(count + step <= maxValue){
             setCount(count + step);
-            console.log("leela")
-            console.log(count)
             handleIncrement();
         }
     }
@@ -25,8 +23,6 @@ export const useCounter = (startValue = 1, maxValue = 1, step = 1) => {
 
     const handleIncrement = () =>{
         setCount(count + 1);
-        console.log("leelo")
-        console.log(count)
     }
     
     return { count, increment, decrement, reset}

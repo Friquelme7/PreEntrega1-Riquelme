@@ -52,6 +52,7 @@ export const deleteProduct = async (id) =>{
 }
 
 export const createOrdenCompra = async (cliente, precioTotal, carrito, fecha) => {
+    console.log("asincronismo puto")
         const ordenCompra = await addDoc(collection(bdd, "ordenesCompra"), {
             cliente : cliente,
             items : carrito, 

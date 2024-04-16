@@ -2,7 +2,7 @@ import "./styles/App.css"
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavBar } from "./components/navBar";
-import { ItemListContainer } from "./components/ItemListContainer.jsx";
+import { ItemListContainer } from "./components/ItemListContainer";
 import { Footer } from "./components/Footer";
 import { Checkout } from "./components/Checkout";
 import { Cart } from "./components/Cart";

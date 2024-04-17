@@ -1,4 +1,5 @@
 import { PageList } from "./PageList"
+import { CartWidget } from "./CartWidget"
 import { SearchBar } from "./SearchBar";
 import { Link } from "react-router-dom";
 

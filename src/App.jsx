@@ -1,4 +1,4 @@
-import "./styles/App.css"
+import "./styles/app.css"
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ItemListContainer } from "./components/ItemListContainer"
